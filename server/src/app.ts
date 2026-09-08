@@ -64,8 +64,14 @@ app.use('/api', apiRouter);
 import path from 'path';
 import fs from 'fs';
 
-const clientDistPath = path.resolve(__dirname, '../../client/dist');
-if (fs.existsSync(clientDistPath)) {
+const possibleDistPaths = [
+  path.resolve(__dirname, '../../client/dist'),
+  path.resolve(__dirname, '../client/dist'),
+  path.resolve(process.cwd(), 'client/dist'),
+];
+const clientDistPath = possibleDistPaths.find((p) => fs.existsSync(p));
+
+if (clientDistPath) {
   app.use(express.static(clientDistPath));
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api')) {
