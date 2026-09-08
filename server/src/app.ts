@@ -8,6 +8,9 @@ import { errorHandler, AppError } from './middleware/errorHandler';
 
 export const app = express();
 
+// Trust reverse proxy headers (Render, Vercel, AWS, Cloudflare)
+app.set('trust proxy', 1);
+
 // Security HTTP headers configured to allow cross-origin API and static asset access
 app.use(
   helmet({
