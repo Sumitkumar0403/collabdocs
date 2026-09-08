@@ -18,7 +18,7 @@ export function useAutosave({
 }: UseAutosaveProps) {
   const queryClient = useQueryClient();
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('saved');
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pendingDataRef = useRef<{ title?: string; content?: any } | null>(null);
 
   const saveToServer = useCallback(
