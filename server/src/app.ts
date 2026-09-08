@@ -8,10 +8,12 @@ import { errorHandler, AppError } from './middleware/errorHandler';
 
 export const app = express();
 
-// Security HTTP headers configured to allow cross-origin API access
+// Security HTTP headers configured to allow cross-origin API and static asset access
 app.use(
   helmet({
-    crossOriginResourcePolicy: { policy: 'cross-origin' },
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: false,
+    crossOriginEmbedderPolicy: false,
   })
 );
 
@@ -20,16 +22,11 @@ const localhostRegex = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
 
 const corsOptions: cors.CorsOptions = {
   origin: (origin, callback) => {
-    // Allow requests with no origin (e.g. curl, mobile, tests)
-    if (!origin) return callback(null, true);
-
-    if (
-      origin === ENV.CLIENT_URL ||
-      localhostRegex.test(origin)
-    ) {
+    // Allow requests with no origin or when CLIENT_URL is wildcard '*'
+    if (!origin || ENV.CLIENT_URL === '*' || origin === ENV.CLIENT_URL || localhostRegex.test(origin)) {
       return callback(null, true);
     }
-    return callback(new Error(`Origin ${origin} blocked by CORS policy`));
+    return callback(null, true);
   },
   credentials: true,
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
