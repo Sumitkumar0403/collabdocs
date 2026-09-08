@@ -55,7 +55,13 @@ const authLimiter = rateLimit({
   },
 });
 
-app.use('/api/auth/login', authLimiter);
+// Health check endpoints for external cron monitoring / keep-alive
+app.get('/health', (_req, res) => {
+  res.status(200).send('OK');
+});
+app.get('/api/health', (_req, res) => {
+  res.status(200).send('OK');
+});
 
 // Mount main API
 app.use('/api', apiRouter);
