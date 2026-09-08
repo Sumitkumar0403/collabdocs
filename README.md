@@ -6,7 +6,8 @@ CollabDocs is a production-grade, lightweight collaborative document editor insp
 
 ## 🚀 Live Demo & Deployment
 
-- **Live Application**: *[Add your live deployment URL here, e.g. Vercel / Render]*
+- **Live Application**: [https://collabdocs-uxrd.onrender.com](https://collabdocs-uxrd.onrender.com)
+- **GitHub Repository**: [https://github.com/Sumitkumar0403/collabdocs](https://github.com/Sumitkumar0403/collabdocs)
 - **Walkthrough Video (3-5 min)**: *[Add your unlisted Loom or YouTube URL here]*
 - **Database**: Serverless PostgreSQL via [Neon](https://neon.tech/)
 

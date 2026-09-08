@@ -6,9 +6,9 @@ This submission package contains all deliverables required for the Ajaia enginee
 
 ## 1. Submission Links
 
-- **Live Application URL**: `[INSERT_YOUR_DEPLOYED_URL_HERE]` *(e.g., https://collabdocs.vercel.app)*
+- **Live Application URL**: [https://collabdocs-uxrd.onrender.com](https://collabdocs-uxrd.onrender.com)
+- **GitHub Repository**: [https://github.com/Sumitkumar0403/collabdocs](https://github.com/Sumitkumar0403/collabdocs)
 - **Walkthrough Video (3–5 min)**: `[INSERT_YOUR_LOOM_OR_YOUTUBE_URL_HERE]`
-- **Source Code Repository**: Provided in this folder.
 
 ---
 
