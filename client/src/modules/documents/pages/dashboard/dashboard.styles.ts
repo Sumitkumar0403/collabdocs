@@ -1,0 +1,16 @@
+export const dashboardStyles = {
+  container: 'min-h-screen bg-slate-50 flex flex-col',
+  navbar: 'sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200/80 px-6 py-3.5 flex items-center justify-between',
+  brand: 'flex items-center gap-2.5',
+  logoIcon: 'flex items-center justify-center w-9 h-9 rounded-md bg-sky-600 text-white shadow-md shadow-sky-600/20',
+  brandName: 'text-lg font-bold tracking-tight text-slate-900',
+  userNav: 'flex items-center gap-4',
+  userInfo: 'flex items-center gap-2',
+  userAvatar: 'w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-700 uppercase',
+  logoutBtn: 'text-xs font-medium text-slate-500 hover:text-red-600 transition flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-red-50',
+  content: 'max-w-6xl w-full mx-auto px-6 py-8 flex-1',
+  actionBar: 'flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8',
+  sectionTitle: 'text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2 mb-4',
+  grid: 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-10',
+  emptyState: 'flex flex-col items-center justify-center p-12 bg-white rounded-2xl border border-dashed border-slate-200 text-center mb-10',
+} as const;

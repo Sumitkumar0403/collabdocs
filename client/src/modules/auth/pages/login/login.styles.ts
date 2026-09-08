@@ -1,0 +1,17 @@
+export const loginStyles = {
+  container: 'min-h-screen flex flex-col justify-center items-center px-4 py-12 bg-slate-50',
+  card: 'w-full max-w-md bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8',
+  header: 'text-center mb-8',
+  logoBadge: 'inline-flex items-center justify-center w-12 h-12 rounded-md bg-sky-600 text-white shadow-md shadow-sky-600/30 mb-4',
+  title: 'text-2xl font-bold tracking-tight text-slate-900',
+  subtitle: 'text-sm text-slate-500 mt-1',
+  form: 'space-y-4',
+  inputGroup: 'space-y-1.5',
+  label: 'block text-xs font-semibold uppercase tracking-wider text-slate-600',
+  input: 'w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition',
+  submitBtn: 'w-full py-2.5 px-4 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-medium text-sm shadow-md shadow-sky-600/20 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2',
+  demoBox: 'mt-8 pt-6 border-t border-slate-100',
+  demoHeader: 'text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3 text-center',
+  demoGrid: 'grid grid-cols-2 gap-3',
+  demoBtn: 'flex flex-col items-start p-3 rounded-md border border-slate-200 hover:border-sky-300 hover:bg-sky-50/50 transition text-left group',
+} as const;
